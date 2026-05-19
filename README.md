@@ -4,3 +4,6 @@ A convenient screenshot app that automatically sorts screenshots into folders by
 
 - > OpenPhoto:
     - > main.py
+
+pip freeze > requirements.txt
+pip install -r requirements.txt
