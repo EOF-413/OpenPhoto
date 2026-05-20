@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Десктоп приложение</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Это приложение</h1>
+            <p>Работает на Flask + Qt</p>
+        </header>
+
+        <div class="content">
+            <div class="card">
+                <h2>Привет, пользователь!</h2>
+                <p>Это приложение работает полностью локально.</p>
+                <button id="clickBtn" class="btn">Нажми меня</button>
+                <p id="message" class="message"></p>
+            </div>
+
+            <div class="card">
+                <h3>Информация</h3>
+                <ul>
+                    <li>✅ Все файлы локальные</li>
+                    <li>✅ Относительное позиционирование</li>
+                    <li>✅ Встроенный браузер</li>
+                    <li>✅ Flask + PyQt5</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <p>Версия 1.0 | Работает без интернета</p>
+        </footer>
+    </div>
+
+    <script>
+        // Локальный JavaScript без внешних зависимостей
+        document.getElementById('clickBtn').addEventListener('click', function() {
+            const message = document.getElementById('message');
+            message.textContent = 'Кнопка нажата! ' + new Date().toLocaleTimeString();
+            message.style.opacity = '1';
+            setTimeout(() => {
+                message.style.opacity = '0';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
